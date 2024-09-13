@@ -1,0 +1,34 @@
+-- 1 Ecommerce e Gestão de Inventário
+-- Exercício 1:
+SELECT produtos.nome_produto, detalhes_pedido.id_pedido, detalhes_pedido.quantidade, detalhes_pedido.preco
+FROM produtos
+LEFT JOIN detalhes_pedido
+ON produtos.id_produto = detalhes_pedido.id_produto;
+    pedidos.cliente_id = clientes.cliente_id;
+    -- 2 Sistema de Gestão de Relacionamento com o Cliente (CRM)
+    -- Exercício 2:
+    SELECT campanhas.nome_campanha, clientes.nome_cliente
+FROM campanhas
+INNER JOIN participacoes_campanha
+ON campanhas.id_campanha = participacoes_campanha.id_campanha
+INNER JOIN clientes
+ON participacoes_campanha.id_cliente = clientes.id_cliente;
+-- 3 Finanças e Controle Orçamentário
+-- Exercício 2:
+SELECT contas.nome_conta, transacoes.id_transacao, transacoes.valor, transacoes.data_transacao
+FROM contas
+LEFT JOIN transacoes
+ON contas.id_conta = transacoes.id_conta;
+-- 4 Saúde e Gestão de Prontuários Eletrônicos
+-- Exercício 2:
+SELECT fornecedores.nome_fornecedor, produtos.nome_produto
+FROM fornecedores
+LEFT JOIN produtos
+ON fornecedores.id_fornecedor = produtos.id_fornecedor;
+
+-- 5 Logística e Cadeia de Suprimentos
+-- Exercício 5:
+SELECT fornecedores.nome_fornecedor, produtos.nome_produto
+FROM fornecedores
+LEFT JOIN produtos
+ON fornecedores.id_fornecedor = produtos.id_fornecedor;
